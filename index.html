@@ -4,59 +4,97 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.4/dist/css/foundation.min.css" crossorigin="anonymous">
-    <link rel="stylesheet" href="./assets/css/style.sass">
     <link rel="stylesheet" href="./assets/css/style.css">
     <title>Restuarnt Roulette</title>
 </head>
 <body>
     <header>
-        <nav>
-            <ul class="menu">
-                <li><a href="#">One</a></li>
-                <li><a href="#">Two</a></li>
-                <li><a href="#">Three</a></li>
-                <li><a href="#">Four</a></li>
-          </ul>
-        </nav>
         <h1 class="text-center">Restuarant Roulette</h1>
-        <div class="dropdown">
-            <label>Cuisine Menu
-                <select>
-                  <option value="American">American</option>
-                  <option value="Chinese">Chinese</option>
-                  <option value="Itailian">Itailian</option>
-                  <option value="Indian">Indian</option>
-                  <option value="Japanese">Japanese</option>
-                  <option value="Mexican">Mexican</option>
-                </select>
-                <a class="button primary" href="#">Primary</a>
-              </label>
-        </div>
     </header>
+    
+    <!--Switches-->  
+      <div class="switch-container">
+        <div>
+          <p>American</p>
+          <div class="switch tiny">
+            <input class="switch-input" id="american-switch" type="checkbox" name="exampleSwitch">
+            <label class="switch-paddle" for="american-switch">
+              <span class="show-for-sr">American Enabled</span>
+            </label>
+          </div>
+        </div>
+        <div>
+          <p>Chinese</p>
+          <div class="switch tiny">
+            <input class="switch-input" id="chinese-switch" type="checkbox" name="exampleSwitch">
+            <label class="switch-paddle" for="chinese-switch">
+              <span class="show-for-sr">Chinese Enabled</span>
+            </label>
+          </div>
+        </div>
+        <div>
+          <p>Itailian</p>
+          <div class="switch tiny">
+            <input class="switch-input" id="itailian-switch" type="checkbox" name="exampleSwitch">
+            <label class="switch-paddle" for="itailian-switch">
+              <span class="show-for-sr">Itailian Enabled</span>
+            </label>
+          </div>
+        </div>
+        <div>
+          <p>Indian</p>
+          <div class="switch tiny">
+            <input class="switch-input" id="indian-switch" type="checkbox" name="exampleSwitch">
+            <label class="switch-paddle" for="indian-switch">
+              <span class="show-for-sr">Indian Enabled</span>
+            </label>
+          </div>
+        </div>
+        <div>
+          <p>Japanese</p>
+          <div class="switch tiny">
+            <input class="switch-input" id="japanese-switch" type="checkbox" name="exampleSwitch">
+            <label class="switch-paddle" for="japanese-switch">
+              <span class="show-for-sr">Japanese Enabled</span>
+            </label>
+          </div>
+        </div>
+        <div>
+          <p>Mexican</p>
+          <div class="switch tiny">
+            <input class="switch-input" id="mexican-switch" type="checkbox" name="exampleSwitch">
+            <label class="switch-paddle" for="mexican-switch">
+              <span class="show-for-sr">Mexican Enabled</span>
+            </label>
+          </div>
+        </div>
+      </div>
 
-    <div class="roulette-button">
+      <!--User Input Feild-->
+      <div class="user-container">
+        <div class="price">
+          <label>Pricing:</label>
+          <input type="text" name="price" maxlength="50" placeholder="$" value=""/>
+        </div>
+        <div>
+          <label>Location:</label>
+          <input type="text" name="location" maxlength="50" placeholder="ZIP" value="">
+        </div>
+        <div>
+          <label>Distance:</label>
+          <input type="text" name="distance" maxlength="50" placeholder="0 miles">
+        </div>
+        <div>
+          <a class="button">Search History</a>
+          
+        </div>
+      </div>
+
+      <!--Roulette Button-->
+      <div class="roulette-button">
         <a class="button expanded" href="#">Roulette</a>
-    </div>
-    <div>
-          <div class="switch tiny">
-            <input class="switch-input" id="tinySwitch" type="checkbox" name="exampleSwitch">
-            <label class="switch-paddle" for="tinySwitch">
-              <span class="show-for-sr">Tiny Sandwiches Enabled</span>
-            </label>
-          </div>
-          <div class="switch tiny">
-            <input class="switch-input" id="tinySwitch" type="checkbox" name="exampleSwitch">
-            <label class="switch-paddle" for="tinySwitch">
-              <span class="show-for-sr">Tiny Sandwiches Enabled</span>
-            </label>
-          </div>
-          <div class="switch tiny">
-            <input class="switch-input" id="tinySwitch" type="checkbox" name="exampleSwitch">
-            <label class="switch-paddle" for="tinySwitch">
-              <span class="show-for-sr">Tiny Sandwiches Enabled</span>
-            </label>
-          </div>
-    </div>
-</body>
-</html>
+      </div>
+    </body>
+    </html>
