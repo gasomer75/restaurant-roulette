@@ -4,11 +4,59 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/assets/css/style.css">
-    <title>Restaurant Roulette</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.4/dist/css/foundation.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/style.sass">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Restuarnt Roulette</title>
 </head>
 <body>
-    
-    <script src="./assets/js/script.js"></script>
+    <header>
+        <nav>
+            <ul class="menu">
+                <li><a href="#">One</a></li>
+                <li><a href="#">Two</a></li>
+                <li><a href="#">Three</a></li>
+                <li><a href="#">Four</a></li>
+          </ul>
+        </nav>
+        <h1 class="text-center">Restuarant Roulette</h1>
+        <div class="dropdown">
+            <label>Cuisine Menu
+                <select>
+                  <option value="American">American</option>
+                  <option value="Chinese">Chinese</option>
+                  <option value="Itailian">Itailian</option>
+                  <option value="Indian">Indian</option>
+                  <option value="Japanese">Japanese</option>
+                  <option value="Mexican">Mexican</option>
+                </select>
+                <a class="button primary" href="#">Primary</a>
+              </label>
+        </div>
+    </header>
+
+    <div class="roulette-button">
+        <a class="button expanded" href="#">Roulette</a>
+    </div>
+    <div>
+          <div class="switch tiny">
+            <input class="switch-input" id="tinySwitch" type="checkbox" name="exampleSwitch">
+            <label class="switch-paddle" for="tinySwitch">
+              <span class="show-for-sr">Tiny Sandwiches Enabled</span>
+            </label>
+          </div>
+          <div class="switch tiny">
+            <input class="switch-input" id="tinySwitch" type="checkbox" name="exampleSwitch">
+            <label class="switch-paddle" for="tinySwitch">
+              <span class="show-for-sr">Tiny Sandwiches Enabled</span>
+            </label>
+          </div>
+          <div class="switch tiny">
+            <input class="switch-input" id="tinySwitch" type="checkbox" name="exampleSwitch">
+            <label class="switch-paddle" for="tinySwitch">
+              <span class="show-for-sr">Tiny Sandwiches Enabled</span>
+            </label>
+          </div>
+    </div>
 </body>
 </html>

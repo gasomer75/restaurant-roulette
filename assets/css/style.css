@@ -1,0 +1,13 @@
+*{
+    color: white;
+}
+
+body {
+    /*background-image: url("/assets/images/backround.jpeg");*/
+}
+
+header {
+    background-image: url("/assets/images/image.png");
+    opacity: 50%;
+    
+}
