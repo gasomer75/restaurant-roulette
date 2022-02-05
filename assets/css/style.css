@@ -16,7 +16,7 @@ header{
     
 }
 
-.button{
+.button {
     background-color: rgb(148, 57, 57);
 }
 
@@ -27,3 +27,10 @@ header{
 .user-container{
     column-count: 4;
 }
+
+footer {
+    border-bottom: 40px solid rgb(148, 57, 57);
+}
+ h5{
+     color: white;
+ }
