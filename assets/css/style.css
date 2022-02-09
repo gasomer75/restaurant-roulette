@@ -1,9 +1,17 @@
+html{
+    size: 50%;
+}
 header{
     color: black;
+    background-image: url(/assets/images/image.png);
     opacity: 70%;
     padding: 40px;
-    border-bottom: 20px solid rgb(148, 57, 57);
     font-weight: bold;
+}
+
+h1{
+    font-weight: 900;
+    color: black;
 }
 
 .switch-container {
@@ -11,12 +19,14 @@ header{
     color: black;
 }
 
-.user-container{
-    
-}
-
 .button {
     background-color: rgb(148, 57, 57);
+    border: 2px solid black;
+    padding: 10px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position:absolute; right:75px; top:235px;
+    font-size: 15px;
 }
 
 .price{
@@ -25,11 +35,13 @@ header{
 
 .user-container{
     column-count: 4;
+    font: bold 15px/30px Georgia, serif;
 }
 
 footer {
     border-bottom: 40px solid rgb(148, 57, 57);
 }
+
  h5{
      color: white;
  }
@@ -38,3 +50,49 @@ footer {
     width: 100%;
     height: 100%
 }
+.rb-container{
+    display:grid;
+ }
+
+.roulette-button{
+    margin:auto;
+    width: 250px;
+    position:absolute; left:375px; top:65px;
+ }
+
+ body{
+    -webkit-transform:scale(0.75);
+    -moz-transform:scale(0.75);
+    -ms-transform:scale(0.75);
+    transform:scale(0.75);
+    -ms-transform-origin:0 0;
+    -webkit-transform-origin:0 0;
+    -moz-transform-origin:0 0;
+    transform-origin:0 0;
+    display:grid;
+    margin-left:25%;
+ }
+
+ body *{
+    margin:auto;
+ }
+
+.button2{
+    background-color: rgb(148, 57, 57);
+    color: white; 
+    border: 2px solid black;
+    padding: 10px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position:absolute; left:375px; top:285px;
+    font: bold 25px/40px Georgia, serif;
+}
+
+.w3-col{
+    font: bold 15px/30px Georgia, serif;
+}
+
+.user-container{
+    font: bold 15px/30px Georgia, serif;
+}
+

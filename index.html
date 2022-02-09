@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.4/dist/css/foundation.min.css" crossorigin="anonymous">
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <title>Restuarnt Roulette</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Restuarant Roulette</title>
 </head>
 <body>
     <header>
@@ -16,7 +16,7 @@
     
     <!--Switches-->  
     <div class="switch-container">
-        <div>
+        <div class="w3-col">
         <p>American</p>          
           <div class="switch tiny">
             <input class="switch-input" id="american-switch" type="checkbox" name="exampleSwitch" data-foodType = "American">
@@ -25,7 +25,7 @@
             </label>
           </div>
        </div>
-        <div>
+        <div class="w3-col">
           <p>Chinese</p>
           <div class="switch tiny">
             <input class="switch-input" id="chinese-switch" type="checkbox" name="exampleSwitch" data-foodType = "Chinese">
@@ -43,7 +43,7 @@
             </label>
           </div>
         </div>
-        <div>
+        <div class="w3-col">
           <p>Indian</p>
           <div class="switch tiny">
             <input class="switch-input" id="indian-switch" type="checkbox" name="exampleSwitch" data-foodType = "Indian">
@@ -52,7 +52,7 @@
             </label>
           </div>
         </div>
-        <div>
+        <div class="w3-col">
           <p>Japanese</p>
           <div class="switch tiny">
             <input class="switch-input" id="japanese-switch" type="checkbox" name="exampleSwitch" data-foodType = "Japanese">
@@ -61,7 +61,7 @@
             </label>
           </div>
         </div>
-        <div>
+        <div class="w3-col">
           <p>Mexican</p>
           <div class="switch tiny">
             <input class="switch-input" id="mexican-switch" type="checkbox" name="exampleSwitch" data-foodType = "Mexican">
@@ -82,18 +82,14 @@
           <label>Location:</label>
           <input type="text" name="location" maxlength="50" placeholder="ZIP" value="">
         </div>
-        <div>
-          <label>Distance:</label>
-          <input type="text" name="distance" maxlength="50" placeholder="0 miles">
-        </div>
-        <div>
+
+        <button>
           <a class="button">Search History</a>
-          
-        </div>
+        </button>
       </div>
 
       <!--Roulette Button-->
-      <div class="roulette-button" id = "roulette-button">
+      <div class="roulette-button" id="rouletteBtn">
         <a class="button expanded" href="#">Roulette</a>
       </div>
 
@@ -102,6 +98,9 @@
           <h3>Roulette'd Restuarant</h3>
           <img src="./assets/images/egg.jpeg" class = "location-image" id = "location-image" alt="Sandwich">
           <h4 class = "name" id = "name">Cafe Egg</h4>
+          <div id = "container1"></div>
+          <img src="./assets/images/egg.jpeg" alt="Sandwich" style="width:100%">
+          <h4>Cafe Egg</h6>
           <p>Just some random text, lorem ipsum text praesent tincidunt ipsum lipsum.</p>
         </div>
         
@@ -154,8 +153,25 @@
       </div>
     </footer>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src ="assets/js/script.js"></script>
+
+    <!--google map/places api-->
+    <script async
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDf3uVZunI6AquJI3klFXdQqN7he62S3hU&libraries=places&callback=initMap">
+  </script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src = "./assets/js/script.js"></script>
     </body>
+
+  <!-- <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAHditS1btTeWikY3Z5_R8r1ngePKFlh7c&amp;libraries=places"></script>
+  <script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/47/7a/common.js"></script>
+  <script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/47/7a/controls.js"></script>    
+  <script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/47/7a/places_impl.js"></script>
+  <script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/47/7a/onion.js"></script>
+  <script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/47/7a/map.js"></script>
+  <script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/47/7a/util.js"></script> -->
+
+</body>
     </html>
