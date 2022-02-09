@@ -2,7 +2,6 @@ html{
     size: 50%;
 }
 header{
-    background-image: url(/assets/images/image.png);
     opacity: 70%;
     padding: 40px;
     font-weight: bold;
