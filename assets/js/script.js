@@ -6,51 +6,54 @@ var clickArray = [];
 var apiArray = [];
 var restaurantObjs = [];
 
-const access_token = "_l5f7C7BDfq3ksCHSP4VGgHaTrUQoYkCxJRAKg1Um2gqJyxYHChBz_dB-vR4Gvlrzk00YQcsfqHemlq0aJ0EWtMJ5dEDoh436BSFUkpn-bZlV1ABayxGf1K3n-b9YXYx";
-let myHeaders = new Headers();
-myHeaders.append("Authorization", "Bearer " + access_token);
+var buttonPress = document.getElementById('#rouletteBtn')
 
-var fetchInfo  = function() {
-    restaurantObjs = [];
-    apiUrl = "https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?term=restaurants&categories=&limit=10&location=Sacramento"
+var restaurants = []
+var map;
+var service;
+var queryString = "";
+
+function initMap() {
+    var center= { lat: 38.575764, lng: -121.478851 };
+    map = new google.maps.Map(document.getElementById("container1"), {
+    center: center,
+    zoom: 15
+    });
+
+    var request = {
+        location: center,
+        radius: '500',
+        query: "mexican chinese italian restaurant"
+    };
+
+    queryString = "";
     for(var i = 0; i < clickArray.length; i++)
     {
-        apiUrl = "https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?term=restaurants&categories=" 
-            +  clickArray[i] + "&location=Sacramento"
-        fetch(apiUrl, {
-            headers: myHeaders 
-            }).then((res) => {
-                return res.json();
-            }).then((json) => {
-                //console.log(json);
-                //console.log(json.businesses);
-                //console.log(json.businesses[0].image_url);
-                //restaurantImage.setAttribute("src", json.businesses[0].image_url);
-                //restaurantName.textContent = json.businesses[0].name;
-                restaurantObjs.push(json);
-            });
+        queryString += clickArray[i] + " ";
     }
-    console.log(restaurantObjs);   
-    //console.log("length first: " + restaurantObjs.length);
-    
-    for(var i = 0; i < apiArray.length; i++)
-    {
-        console.log(apiArray[i]);
-        for(var j = 0; j < restaurantObjs.length; j++)
-        {
-            console.log("length: " + restaurantObjs.length);
-            for(var k = 0; k < restaurantObjs[j].businesses[0].categories.length; k++)
-            {
-                if(restaurantObjs[j].businesses[0].categories[k] == apiArray[i])
-                {
-                    console.log("found" + apiArray[i]);
-                    console.log(restaurantObjs.businesses[0].name);
-                }
-            }
+    queryString += "restaurant"
+    console.log(queryString);
+    request.query = queryString;
+
+    service = new google.maps.places.PlacesService(map);
+
+      service.textSearch(request, function(results, status) {
+          console.log(status)
+        if (status === google.maps.places.PlacesServiceStatus.OK) {
+            console.log(results);
+            /*results.forEach(function(item) {
+                console.log(`restaurant is: ${item.name} price is: ${item.price_level} photo is: ${item.photos} address is: ${item.formatted_address}`)
+            })*/
+          /*console.log(results[Math.floor(Math.random()*results.length)])
+          restaurants = results*/
         }
-    }
+      });
 }
 
+/*buttonPress.addEventListener('click', function () {
+    initMap();
+    console.log(restaurants[Math.floor(Math.random()*restaurants.length)]);
+})*/
 
 var getInfo = function(event) {
     console.log(event.target.getAttribute("data-foodType"));
@@ -69,7 +72,7 @@ var validateBoxes = function() {
 
     if(americanSwitch.checked)
     {
-        clickArray.push("tradamerican")
+        clickArray.push("american")
     }
     if(chineseSwitch.checked)
     {
@@ -81,7 +84,7 @@ var validateBoxes = function() {
     }
     if(indianSwitch.checked)
     {
-        clickArray.push("indpak");
+        clickArray.push("indian");
 
     }
     if(japaneseSwitch.checked)
@@ -100,8 +103,8 @@ var validateBoxes = function() {
         apiArray.push(arrayEl);
     }
     console.log(apiArray);
-    fetchInfo();
+    initMap();
 }
 
-switchDivEl.addEventListener("change", getInfo);
-rouletteButtonEl.addEventListener("click", validateBoxes);
+switchDivEl.addEventListener("change", getInfo)
+rouletteButtonEl.addEventListener("click", validateBoxes)
