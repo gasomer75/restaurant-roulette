@@ -24,7 +24,7 @@ buttonPress.addEventListener('click', function () {
         radius: '500',
         query: `${foodTypes.join(" ")} restaurant`
     };
-    // console.log(request.query)
+     console.log(request.query)
     service.textSearch(request, function(results, status) {
       if (status === google.maps.places.PlacesServiceStatus.OK) {
          console.log(results[Math.floor(Math.random()*results.length)])
@@ -32,6 +32,7 @@ buttonPress.addEventListener('click', function () {
          console.log(randomRestaurant.photos[0].getUrl())
         restaurantName.textContent = randomRestaurant.name
         address.textContent = randomRestaurant.formatted_address
+        
         if (randomRestaurant.photos) {
             picture1.src=randomRestaurant.photos[0].getUrl()
         }
