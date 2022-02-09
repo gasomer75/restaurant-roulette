@@ -2,21 +2,22 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=0.67">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.4/dist/css/foundation.min.css" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/css/style.css">
-    <title>Restuarnt Roulette</title>
+    <title>Restaurant Roulette</title>
 </head>
+
 <body>
     <header>
-        <h1 class="text-center">Restuarant Roulette</h1>
+        <h1 class="text-center">Restaurant Roulette</h1>
     </header>
     
     <!--Switches-->  
-    <div class="switch-container">
-        <div>
+    <div class="switch-container w3-row">
+        <div class="w3-col">
         <p>American</p>          
           <div class="switch tiny">
             <input class="switch-input" id="american-switch" type="checkbox" name="exampleSwitch">
@@ -25,7 +26,7 @@
             </label>
           </div>
        </div>
-        <div>
+        <div class="w3-col">
           <p>Chinese</p>
           <div class="switch tiny">
             <input class="switch-input" id="chinese-switch" type="checkbox" name="exampleSwitch">
@@ -34,16 +35,16 @@
             </label>
           </div>
         </div>
-        <div>
-          <p>Itailian</p>
+        <div class="w3-col">
+          <p>Italian</p>
           <div class="switch tiny">
-            <input class="switch-input" id="itailian-switch" type="checkbox" name="exampleSwitch">
-            <label class="switch-paddle" for="itailian-switch">
-              <span class="show-for-sr">Itailian Enabled</span>
+            <input class="switch-input" id="italian-switch" type="checkbox" name="exampleSwitch">
+            <label class="switch-paddle" for="italian-switch">
+              <span class="show-for-sr">Italian Enabled</span>
             </label>
           </div>
         </div>
-        <div>
+        <div class="w3-col">
           <p>Indian</p>
           <div class="switch tiny">
             <input class="switch-input" id="indian-switch" type="checkbox" name="exampleSwitch">
@@ -52,7 +53,7 @@
             </label>
           </div>
         </div>
-        <div>
+        <div class="w3-col">
           <p>Japanese</p>
           <div class="switch tiny">
             <input class="switch-input" id="japanese-switch" type="checkbox" name="exampleSwitch">
@@ -61,7 +62,7 @@
             </label>
           </div>
         </div>
-        <div>
+        <div class="w3-col">
           <p>Mexican</p>
           <div class="switch tiny">
             <input class="switch-input" id="mexican-switch" type="checkbox" name="exampleSwitch">
@@ -86,16 +87,16 @@
           <label>Distance:</label>
           <input type="text" name="distance" maxlength="50" placeholder="0 miles">
         </div>
-        <div>
+
+        <button>
           <a class="button">Search History</a>
-          
-        </div>
+        </button>
       </div>
 
       <!--Roulette Button-->
-      <div class="roulette-button">
-        <a class="button expanded" href="#">Roulette</a>
-      </div>
+      <button>
+        <a class="button2">Roulette</a>
+      </button>
 
       <div class="w3-main w3-content w3-padding" style="max-width: 1200px; margin-top: 50px;">
         <div class="w3-center">
