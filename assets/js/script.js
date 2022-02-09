@@ -4,19 +4,46 @@ var restaurantName = document.getElementById('restaurantName')
 var address = document.getElementById('address')
 var zipCode = document.getElementById("zipCode")
 var foodTypes = []
+var markers = [];
 var map;
 var service;
 var center;
+var marker;
 
 
 function initMap() {
-    center= { lat: 38.575764, lng: -121.478851 };
-    map = new google.maps.Map(document.getElementById("container1"), {
-    center: center,
-    zoom: 15
-    });
+    var options = {
+        zoom:13,
+        center:{ lat: 38.575764, lng: -121.478851 }
+    }
+
+    map = new google.maps.Map(document.getElementById("map"), options);
 
     service = new google.maps.places.PlacesService(map);
+}
+
+function placeMarker(lat, lng, name)
+{
+    var marker = new google.maps.Marker({
+        position: {lat: lat, lng: lng},
+        map: map
+    });
+
+    var infoWindow = new google.maps.InfoWindow({
+        content: '<h3>' + name +'</h3>'
+    });
+
+    marker.addListener("click", function(){
+        infoWindow.open(map, marker);
+    });
+
+    markers.push(marker);
+}
+
+function removeMarkers() {
+    for (let i = 0; i < markers.length; i++) {
+        markers[i].setMap(null);
+    }
 }
 
 buttonPress.addEventListener('click', function () {
@@ -38,12 +65,14 @@ buttonPress.addEventListener('click', function () {
 })
 
 function searchRest(center) {
+    //console.log("made it")
     var request = {
         location: center,
-        radius: '10',
+        radius: '500',
         query: `${foodTypes.join(" ")} restaurant`
     };
-    //console.log(request)
+    //console.log(request);
+    var coords;
     service.textSearch(request, function(results, status) {
       if (status === google.maps.places.PlacesServiceStatus.OK) {
         //console.log(results);
@@ -55,8 +84,27 @@ function searchRest(center) {
         if (randomRestaurant.photos) {
             picture1.src=randomRestaurant.photos[0].getUrl()
         }
+        axios.get("https://maps.googleapis.com/maps/api/geocode/json", {
+        params:{
+            address: randomRestaurant.formatted_address,
+            key: 'AIzaSyAONmMU3cYfY67VabnCdB5GEKU9dVUhYJQ'
+        }
+        })
+        .then(function(response) {
+            //console.log(response);
+            removeMarkers();
+            coords = response.data.results[0].geometry.location;
+            //console.log(coords);
+            placeMarker(coords.lat, coords.lng, randomRestaurant.name);
+            moveMapCenter(coords.lat, coords.lng);
+        })
       }
     });
+}
+
+function moveMapCenter(lat, lng) {
+    var newCent = new google.maps.LatLng(lat, lng);
+    window.map.panTo(newCent);
 }
 
 //food toggle button

@@ -87,3 +87,9 @@ footer {
 .Names{
     font: bold 20px Georgia;
 }
+
+#map {
+    width: 600px;
+    height: 450px;
+    text-align: center;
+}
