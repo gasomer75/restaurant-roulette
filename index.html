@@ -19,7 +19,7 @@
         <div class="w3-col">
         <p>American</p>          
           <div class="switch tiny">
-            <input class="switch-input" id="american-switch" type="checkbox" name="exampleSwitch">
+            <input class="switch-input" id="american-switch" type="checkbox" name="american" onclick="handleToggle(this)">
             <label class="switch-paddle" for="american-switch">
               <span class="show-for-sr">American Enabled</span>
             </label>
@@ -28,7 +28,7 @@
         <div class="w3-col">
           <p>Chinese</p>
           <div class="switch tiny">
-            <input class="switch-input" id="chinese-switch" type="checkbox" name="exampleSwitch">
+            <input class="switch-input" id="chinese-switch" type="checkbox" name="chinese" onclick="handleToggle(this)">
             <label class="switch-paddle" for="chinese-switch">
               <span class="show-for-sr">Chinese Enabled</span>
             </label>
@@ -37,7 +37,7 @@
         <div class="w3-col">
           <p>Itailian</p>
           <div class="switch tiny">
-            <input class="switch-input" id="itailian-switch" type="checkbox" name="exampleSwitch">
+            <input class="switch-input" id="itailian-switch" type="checkbox" name="italian" onclick="handleToggle(this)">
             <label class="switch-paddle" for="itailian-switch">
               <span class="show-for-sr">Itailian Enabled</span>
             </label>
@@ -46,7 +46,7 @@
         <div class="w3-col">
           <p>Indian</p>
           <div class="switch tiny">
-            <input class="switch-input" id="indian-switch" type="checkbox" name="exampleSwitch">
+            <input class="switch-input" id="indian-switch" type="checkbox" name="indian" onclick="handleToggle(this)">
             <label class="switch-paddle" for="indian-switch">
               <span class="show-for-sr">Indian Enabled</span>
             </label>
@@ -55,7 +55,7 @@
         <div class="w3-col">
           <p>Japanese</p>
           <div class="switch tiny">
-            <input class="switch-input" id="japanese-switch" type="checkbox" name="exampleSwitch">
+            <input class="switch-input" id="japanese-switch" type="checkbox" name="japanese" onclick="handleToggle(this)">
             <label class="switch-paddle" for="japanese-switch">
               <span class="show-for-sr">Japanese Enabled</span>
             </label>
@@ -64,7 +64,7 @@
         <div class="w3-col">
           <p>Mexican</p>
           <div class="switch tiny">
-            <input class="switch-input" id="mexican-switch" type="checkbox" name="exampleSwitch">
+            <input class="switch-input" id="mexican-switch" type="checkbox" name="mexican" onclick="handleToggle(this)">
             <label class="switch-paddle" for="mexican-switch">
               <span class="show-for-sr">Mexican Enabled</span>
             </label>
@@ -97,9 +97,9 @@
         <div class="w3-center">
           <h3>Roulette'd Restuarant</h3>
           <div id = "container1"></div>
-          <img src="./assets/images/egg.jpeg" alt="Sandwich" style="width:100%">
-          <h4>Cafe Egg</h6>
-          <p>Just some random text, lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+          <img id="picture1" src="./assets/images/egg.jpeg" alt="Sandwich" style="width:100%">
+          <h4 id="restaurantName">Cafe Egg</h4>
+          <p id="address">Address</p>
         </div>
         
       <div class="w3-center w3-padding-32">
@@ -157,15 +157,5 @@
     <script async
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDf3uVZunI6AquJI3klFXdQqN7he62S3hU&libraries=places&callback=initMap">
   </script>
-
-
-  <!-- <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAHditS1btTeWikY3Z5_R8r1ngePKFlh7c&amp;libraries=places"></script>
-  <script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/47/7a/common.js"></script>
-  <script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/47/7a/controls.js"></script>    
-  <script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/47/7a/places_impl.js"></script>
-  <script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/47/7a/onion.js"></script>
-  <script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/47/7a/map.js"></script>
-  <script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/47/7a/util.js"></script> -->
-
 </body>
     </html>

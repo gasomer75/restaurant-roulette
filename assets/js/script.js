@@ -1,40 +1,50 @@
 var buttonPress = document.getElementById('rouletteBtn')
-
-var restaurants = []
+var picture1 = document.getElementById('picture1')
+var restaurantName = document.getElementById('restaurantName')
+var address = document.getElementById('address')
+var foodTypes = []
 var map;
 var service;
+var center;
 
 function initMap() {
-    var center= { lat: 38.575764, lng: -121.478851 };
+    center= { lat: 38.575764, lng: -121.478851 };
     map = new google.maps.Map(document.getElementById("container1"), {
     center: center,
     zoom: 15
     });
 
-    var request = {
-        location: center,
-        radius: '500',
-        query: "mexican chinese italian restaurant"
-    };
-
     service = new google.maps.places.PlacesService(map);
-
-      service.textSearch(request, function(results, status) {
-          console.log(status)
-        if (status === google.maps.places.PlacesServiceStatus.OK) {
-            results.forEach(function(item) {
-                console.log(`restaurant is: ${item.name} price is: ${item.price_level} photo is: ${item.photos} address is: ${item.formatted_address}`)
-            })
-          console.log(results[Math.floor(Math.random()*results.length)])
-          restaurants = results
-        }
-      });
 }
 
 buttonPress.addEventListener('click', function () {
-    initMap ()
-    console.log(restaurants[Math.floor(Math.random()*restaurants.length)])
+    var request = {
+        location: center,
+        radius: '500',
+        query: `${foodTypes.join(" ")} restaurant`
+    };
+    // console.log(request.query)
+    service.textSearch(request, function(results, status) {
+      if (status === google.maps.places.PlacesServiceStatus.OK) {
+        // console.log(results[Math.floor(Math.random()*results.length)])
+        var randomRestaurant = results[Math.floor(Math.random()*results.length)]
+        // console.log(randomRestaurant.photos[0].getUrl())
+        restaurantName.textContent = randomRestaurant.name
+        address.textContent = randomRestaurant.formatted_address
+        if (randomRestaurant.photos) {
+            picture1.src=randomRestaurant.photos[0].getUrl()
+        }
+      }
+    });
 })
 
-//when roulette btn pushed, call service text search
-
+//food toggle button
+function handleToggle(element) {
+    if (element.checked) {
+        if (foodTypes.indexOf(element.name) === -1) {
+            foodTypes.push(element.name)
+        }
+    } else {
+        foodTypes.splice(foodTypes.indexOf(element.name), 1)
+    }
+}
