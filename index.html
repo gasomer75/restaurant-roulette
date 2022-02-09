@@ -2,25 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=0.67">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.4/dist/css/foundation.min.css" crossorigin="anonymous">
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <title>Restaurant Roulette</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Restuarant Roulette</title>
 </head>
-
 <body>
     <header>
-        <h1 class="text-center">Restaurant Roulette</h1>
+        <h1 class="text-center">Restuarant Roulette</h1>
     </header>
     
     <!--Switches-->  
-    <div class="switch-container w3-row">
+    <div class="switch-container">
         <div class="w3-col">
         <p>American</p>          
           <div class="switch tiny">
-            <input class="switch-input" id="american-switch" type="checkbox" name="exampleSwitch">
+            <input class="switch-input" id="american-switch" type="checkbox" name="american" onclick="handleToggle(this)">
             <label class="switch-paddle" for="american-switch">
               <span class="show-for-sr">American Enabled</span>
             </label>
@@ -29,25 +28,25 @@
         <div class="w3-col">
           <p>Chinese</p>
           <div class="switch tiny">
-            <input class="switch-input" id="chinese-switch" type="checkbox" name="exampleSwitch">
+            <input class="switch-input" id="chinese-switch" type="checkbox" name="chinese" onclick="handleToggle(this)">
             <label class="switch-paddle" for="chinese-switch">
               <span class="show-for-sr">Chinese Enabled</span>
             </label>
           </div>
         </div>
         <div class="w3-col">
-          <p>Italian</p>
+          <p>Itailian</p>
           <div class="switch tiny">
-            <input class="switch-input" id="italian-switch" type="checkbox" name="exampleSwitch">
-            <label class="switch-paddle" for="italian-switch">
-              <span class="show-for-sr">Italian Enabled</span>
+            <input class="switch-input" id="itailian-switch" type="checkbox" name="italian" onclick="handleToggle(this)">
+            <label class="switch-paddle" for="itailian-switch">
+              <span class="show-for-sr">Itailian Enabled</span>
             </label>
           </div>
         </div>
         <div class="w3-col">
           <p>Indian</p>
           <div class="switch tiny">
-            <input class="switch-input" id="indian-switch" type="checkbox" name="exampleSwitch">
+            <input class="switch-input" id="indian-switch" type="checkbox" name="indian" onclick="handleToggle(this)">
             <label class="switch-paddle" for="indian-switch">
               <span class="show-for-sr">Indian Enabled</span>
             </label>
@@ -56,7 +55,7 @@
         <div class="w3-col">
           <p>Japanese</p>
           <div class="switch tiny">
-            <input class="switch-input" id="japanese-switch" type="checkbox" name="exampleSwitch">
+            <input class="switch-input" id="japanese-switch" type="checkbox" name="japanese" onclick="handleToggle(this)">
             <label class="switch-paddle" for="japanese-switch">
               <span class="show-for-sr">Japanese Enabled</span>
             </label>
@@ -65,7 +64,7 @@
         <div class="w3-col">
           <p>Mexican</p>
           <div class="switch tiny">
-            <input class="switch-input" id="mexican-switch" type="checkbox" name="exampleSwitch">
+            <input class="switch-input" id="mexican-switch" type="checkbox" name="mexican" onclick="handleToggle(this)">
             <label class="switch-paddle" for="mexican-switch">
               <span class="show-for-sr">Mexican Enabled</span>
             </label>
@@ -83,10 +82,6 @@
           <label>Location:</label>
           <input type="text" name="location" maxlength="50" placeholder="ZIP" value="">
         </div>
-        <div>
-          <label>Distance:</label>
-          <input type="text" name="distance" maxlength="50" placeholder="0 miles">
-        </div>
 
         <button>
           <a class="button">Search History</a>
@@ -94,34 +89,23 @@
       </div>
 
       <!--Roulette Button-->
-      <button>
-        <a class="button2">Roulette</a>
-      </button>
+      <div class="roulette-button">
+        <a class="button expanded" href="#" id = "rouletteBtn">Roulette</a>
+      </div>
 
       <div class="w3-main w3-content w3-padding" style="max-width: 1200px; margin-top: 50px;">
         <div class="w3-center">
           <h3>Roulette'd Restuarant</h3>
-          <img src="./assets/images/egg.jpeg" alt="Sandwich" style="width:100%">
-          <h4>Cafe Egg</h6>
-          <p>Just some random text, lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+          <div id = "container1"></div>
+          <img id="picture1" src="./assets/images/image.png" alt="Sandwich" style="width:100%">
+          <h4 id="restaurantName">Play roulette to reveal a restaurant</h4>
+          <p id="address"></p>
         </div>
         
-      <div class="w3-center w3-padding-32">
-        <div class="w3-bar">
-          <a href="#" class="w3-bar-item w3-button w3-hover-black">«</a>
-          <a href="#" class="w3-bar-item w3-black w3-button">1</a>
-          <a href="#" class="w3-bar-item w3-button w3-hover-black">2</a>
-          <a href="#" class="w3-bar-item w3-button w3-hover-black">3</a>
-          <a href="#" class="w3-bar-item w3-button w3-hover-black">4</a>
-          <a href="#" class="w3-bar-item w3-button w3-hover-black">5</a>
-          <a href="#" class="w3-bar-item w3-button w3-hover-black">6</a>
-          <a href="#" class="w3-bar-item w3-button w3-hover-black">»</a>
-        </div>
-      </div>
     </div>
       
     <div>
-        <div class="w3-quarter">
+        <div class="w3-quarter review1-container">
           <h5>Reviews</h5>
           <img src="./assets/images/placerholder-profile.jpeg" alt="review profile">
           <p>Just some random text, lorem ipsum text praesent tincidunt ipsum lipsum.</p>
@@ -141,25 +125,19 @@
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d199665.81927246752!2d-121.58334165550093!3d38.561918543049735!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x809ac672b28397f9%3A0x921f6aaa74197fdb!2sSacramento%2C%20CA!5e0!3m2!1sen!2sus!4v1644018361984!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>        </div>
     </div>
 
-    <footer>
-      <div class="w3-third">
-        <h3>THANK YOU</h3>
-        <p><strong>Created By:</strong></p>
-        <p>
-          Devin Reina <br>
-          Geoff Somer<br>
-          Tyler Beck<br>
-          Jessica Veroza<br>
-          Rachel Saito
-        </p>  
-      </div>
+    <footer class="w3-container w3-padding-64 w3-light-grey w3-center w3-large"> 
+      <p class="TY">Thank You</p>
+      <p>--------------------------------------------------------------------------------------------------------------------------------------</p>
+      <p class="Names">Tyler Beck, Devin Reina, Rachel Saito, Geoff Somer, Jessica Veroza</p>
     </footer>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-    <script src="./assets/js/script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src ="assets/js/script.js"></script>
 
+    <!--google map/places api-->
+    <script async
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDf3uVZunI6AquJI3klFXdQqN7he62S3hU&libraries=places&callback=initMap">
+  </script>
 
-
-
-    </body>
-    </html>
+</body>
+ </html>
