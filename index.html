@@ -19,7 +19,7 @@
         <div class="w3-col">
         <p>American</p>          
           <div class="switch tiny">
-            <input class="switch-input" id="american-switch" type="checkbox" name="exampleSwitch" data-foodType="american">
+            <input class="switch-input" id="american-switch" type="checkbox" name="exampleSwitch">
             <label class="switch-paddle" for="american-switch">
               <span class="show-for-sr">American Enabled</span>
             </label>
@@ -28,17 +28,17 @@
         <div class="w3-col">
           <p>Chinese</p>
           <div class="switch tiny">
-            <input class="switch-input" id="chinese-switch" type="checkbox" name="exampleSwitch" data-foodType="chinese">
+            <input class="switch-input" id="chinese-switch" type="checkbox" name="exampleSwitch">
             <label class="switch-paddle" for="chinese-switch">
               <span class="show-for-sr">Chinese Enabled</span>
             </label>
           </div>
         </div>
-        <div>
-          <p>Italian</p>
+        <div class="w3-col">
+          <p>Itailian</p>
           <div class="switch tiny">
-            <input class="switch-input" id="italian-switch" type="checkbox" name="exampleSwitch" data-foodType="italian">
-            <label class="switch-paddle" for="italian-switch">
+            <input class="switch-input" id="itailian-switch" type="checkbox" name="exampleSwitch">
+            <label class="switch-paddle" for="itailian-switch">
               <span class="show-for-sr">Itailian Enabled</span>
             </label>
           </div>
@@ -46,7 +46,7 @@
         <div class="w3-col">
           <p>Indian</p>
           <div class="switch tiny">
-            <input class="switch-input" id="indian-switch" type="checkbox" name="exampleSwitch" data-foodType = "indian">
+            <input class="switch-input" id="indian-switch" type="checkbox" name="exampleSwitch">
             <label class="switch-paddle" for="indian-switch">
               <span class="show-for-sr">Indian Enabled</span>
             </label>
@@ -55,7 +55,7 @@
         <div class="w3-col">
           <p>Japanese</p>
           <div class="switch tiny">
-            <input class="switch-input" id="japanese-switch" type="checkbox" name="exampleSwitch" data-foodType = "japanese">
+            <input class="switch-input" id="japanese-switch" type="checkbox" name="exampleSwitch">
             <label class="switch-paddle" for="japanese-switch">
               <span class="show-for-sr">Japanese Enabled</span>
             </label>
@@ -64,7 +64,7 @@
         <div class="w3-col">
           <p>Mexican</p>
           <div class="switch tiny">
-            <input class="switch-input" id="mexican-switch" type="checkbox" name="exampleSwitch" data-foodType = "mexican">
+            <input class="switch-input" id="mexican-switch" type="checkbox" name="exampleSwitch">
             <label class="switch-paddle" for="mexican-switch">
               <span class="show-for-sr">Mexican Enabled</span>
             </label>
@@ -89,29 +89,19 @@
       </div>
 
       <!--Roulette Button-->
-      <div class="roulette-button" id="rouletteBtn">
+      <div class="roulette-button">
         <a class="button expanded" href="#">Roulette</a>
       </div>
 
       <div class="w3-main w3-content w3-padding" style="max-width: 1200px; margin-top: 50px;">
         <div class="w3-center">
           <h3>Roulette'd Restuarant</h3>
-          <img src="./assets/images/egg.jpeg" class = "location-image" id = "location-image" alt="Sandwich">
-          <h4 class = "name" id = "name">Cafe Egg</h4>
           <div id = "container1"></div>
+          <img src="./assets/images/egg.jpeg" alt="Sandwich" style="width:100%">
+          <h4>Cafe Egg</h6>
           <p>Just some random text, lorem ipsum text praesent tincidunt ipsum lipsum.</p>
         </div>
         
-      <div class="w3-center w3-padding-32">
-        <div class="w3-bar">
-          <a href="#" class="w3-bar-item w3-button w3-hover-black">«</a>
-          <a href="#" class="w3-bar-item w3-black w3-button">1</a>
-          <a href="#" class="w3-bar-item w3-button w3-hover-black">2</a>
-          <a href="#" class="w3-bar-item w3-button w3-hover-black">3</a>
-          <a href="#" class="w3-bar-item w3-button w3-hover-black">4</a>
-          <a href="#" class="w3-bar-item w3-button w3-hover-black">»</a>
-        </div>
-      </div>
     </div>
       
     <div>
@@ -135,19 +125,10 @@
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d199665.81927246752!2d-121.58334165550093!3d38.561918543049735!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x809ac672b28397f9%3A0x921f6aaa74197fdb!2sSacramento%2C%20CA!5e0!3m2!1sen!2sus!4v1644018361984!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>        </div>
     </div>
 
-    <footer>
-      <div class="w3-third">
-        <h3>THANK YOU</h3>
-        <p><strong>Created By:</strong></p>
-        <p>
-          Devin Reina <br>
-          Geoff Somer<br>
-          Tyler Beck<br>
-          Jessica Veroza<br>
-          Rachel Saito
-        </p>
-    
-      </div>
+    <footer class="w3-container w3-padding-64 w3-light-grey w3-center w3-large"> 
+      <p class="TY">Thank You</p>
+      <p>--------------------------------------------------------------------------------------------------------------------------------------</p>
+      <p class="Names">Tyler Beck, Devin Reina, Rachel Saito, Geoff Somer, Jessica Veroza</p>
     </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -156,8 +137,9 @@
     <!--google map/places api-->
     <script async
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDf3uVZunI6AquJI3klFXdQqN7he62S3hU&libraries=places&callback=initMap">
-    </script>
+  </script>
 
+  
   <!-- <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAHditS1btTeWikY3Z5_R8r1ngePKFlh7c&amp;libraries=places"></script>
   <script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/47/7a/common.js"></script>
   <script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/47/7a/controls.js"></script>    
