@@ -11,7 +11,7 @@
 </head>
 <body>
     <header>
-        <h1 class="text-center">Restuarant Roulette</h1>
+        <h1 class="text-center">Restaurant Roulette</h1>
     </header>
     
     <!--Switches-->  
@@ -19,7 +19,7 @@
         <div>
         <p>American</p>          
           <div class="switch tiny">
-            <input class="switch-input" id="american-switch" type="checkbox" name="exampleSwitch">
+            <input class="switch-input" id="american-switch" type="checkbox" name="exampleSwitch" data-foodType = "American">
             <label class="switch-paddle" for="american-switch">
               <span class="show-for-sr">American Enabled</span>
             </label>
@@ -28,25 +28,25 @@
         <div>
           <p>Chinese</p>
           <div class="switch tiny">
-            <input class="switch-input" id="chinese-switch" type="checkbox" name="exampleSwitch">
+            <input class="switch-input" id="chinese-switch" type="checkbox" name="exampleSwitch" data-foodType = "Chinese">
             <label class="switch-paddle" for="chinese-switch">
               <span class="show-for-sr">Chinese Enabled</span>
             </label>
           </div>
         </div>
         <div>
-          <p>Itailian</p>
+          <p>Italian</p>
           <div class="switch tiny">
-            <input class="switch-input" id="itailian-switch" type="checkbox" name="exampleSwitch">
-            <label class="switch-paddle" for="itailian-switch">
-              <span class="show-for-sr">Itailian Enabled</span>
+            <input class="switch-input" id="italian-switch" type="checkbox" name="exampleSwitch" data-foodType = "Italian">
+            <label class="switch-paddle" for="italian-switch">
+              <span class="show-for-sr">Italian Enabled</span>
             </label>
           </div>
         </div>
         <div>
           <p>Indian</p>
           <div class="switch tiny">
-            <input class="switch-input" id="indian-switch" type="checkbox" name="exampleSwitch">
+            <input class="switch-input" id="indian-switch" type="checkbox" name="exampleSwitch" data-foodType = "Indian">
             <label class="switch-paddle" for="indian-switch">
               <span class="show-for-sr">Indian Enabled</span>
             </label>
@@ -55,7 +55,7 @@
         <div>
           <p>Japanese</p>
           <div class="switch tiny">
-            <input class="switch-input" id="japanese-switch" type="checkbox" name="exampleSwitch">
+            <input class="switch-input" id="japanese-switch" type="checkbox" name="exampleSwitch" data-foodType = "Japanese">
             <label class="switch-paddle" for="japanese-switch">
               <span class="show-for-sr">Japanese Enabled</span>
             </label>
@@ -64,7 +64,7 @@
         <div>
           <p>Mexican</p>
           <div class="switch tiny">
-            <input class="switch-input" id="mexican-switch" type="checkbox" name="exampleSwitch">
+            <input class="switch-input" id="mexican-switch" type="checkbox" name="exampleSwitch" data-foodType = "Mexican">
             <label class="switch-paddle" for="mexican-switch">
               <span class="show-for-sr">Mexican Enabled</span>
             </label>
@@ -93,15 +93,15 @@
       </div>
 
       <!--Roulette Button-->
-      <div class="roulette-button">
+      <div class="roulette-button" id = "roulette-button">
         <a class="button expanded" href="#">Roulette</a>
       </div>
 
       <div class="w3-main w3-content w3-padding" style="max-width: 1200px; margin-top: 50px;">
         <div class="w3-center">
           <h3>Roulette'd Restuarant</h3>
-          <img src="./assets/images/egg.jpeg" alt="Sandwich" style="width:100%">
-          <h4>Cafe Egg</h6>
+          <img src="./assets/images/egg.jpeg" class = "location-image" id = "location-image" alt="Sandwich">
+          <h4 class = "name" id = "name">Cafe Egg</h4>
           <p>Just some random text, lorem ipsum text praesent tincidunt ipsum lipsum.</p>
         </div>
         
@@ -112,6 +112,7 @@
           <a href="#" class="w3-bar-item w3-button w3-hover-black">2</a>
           <a href="#" class="w3-bar-item w3-button w3-hover-black">3</a>
           <a href="#" class="w3-bar-item w3-button w3-hover-black">4</a>
+          <a href="#" class="w3-bar-item w3-button w3-hover-black">5</a>
           <a href="#" class="w3-bar-item w3-button w3-hover-black">»</a>
         </div>
       </div>
@@ -154,7 +155,7 @@
     </footer>
 
 
-
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src = "./assets/js/script.js"></script>
     </body>
     </html>

@@ -1,6 +1,5 @@
 header{
-    background-image: url(/assets/images/image.png);
-    color: white;
+    color: black;
     opacity: 70%;
     padding: 40px;
     border-bottom: 20px solid rgb(148, 57, 57);
@@ -34,3 +33,8 @@ footer {
  h5{
      color: white;
  }
+
+.location-image {
+    width: 100%;
+    height: 100%
+}
