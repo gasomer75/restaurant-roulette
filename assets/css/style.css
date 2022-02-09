@@ -33,7 +33,7 @@ h1{
 }
 
 .user-container{
-    column-count: 4;
+    column-count: 3;
     font: bold 15px/30px Georgia, serif;
 }
 
@@ -53,6 +53,7 @@ footer {
     margin:auto;
     width: 250px;
     position:absolute; left:375px; top:65px;
+    font: bold 15px/30px Georgia, serif;
  }
 
  body{
@@ -72,17 +73,6 @@ footer {
     margin:auto;
  }
 
-.button2{
-    background-color: rgb(148, 57, 57);
-    color: white; 
-    border: 2px solid black;
-    padding: 10px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position:absolute; left:375px; top:285px;
-    font: bold 25px/40px Georgia, serif;
-}
-
 .w3-col{
     font: bold 15px/30px Georgia, serif;
 }
@@ -91,3 +81,10 @@ footer {
     font: bold 15px/30px Georgia, serif;
 }
 
+.TY{
+    font: bold 40px Georgia;
+}
+
+.Names{
+    font: bold 20px Georgia;
+}
