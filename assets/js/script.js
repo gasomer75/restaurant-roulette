@@ -112,19 +112,21 @@ buttonPress.addEventListener('click', function () {
         }
     })
     .then(function(response){
-        //console.log(response)
+        console.log(response)
         center = response.data.results[0].geometry.location;
-        //console.log(center);
+        console.log("old")
+        console.log(center);
         searchRest(center);
     });   
     
 })
 
 function searchRest(center) {
-    //console.log("made it")
+    console.log("made it")
+    console.log(center);
     var request = {
         location: center,
-        radius: '500',
+        radius: '5',
         query: `${foodTypes.join(" ")} restaurant`
     };
     //console.log(request);
