@@ -88,6 +88,8 @@ footer {
     font: bold 20px Georgia;
 }
 
-.info-container{
-    padding-top: 30px;
+#map {
+    width: 600px;
+    height: 450px;
+    text-align: center;
 }
