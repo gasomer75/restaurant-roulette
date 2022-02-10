@@ -4,6 +4,8 @@ var picture1 = document.getElementById('picture1')
 var restaurantName = document.getElementById('restaurantName')
 var address = document.getElementById('address')
 var zipCode = document.getElementById("zipCode")
+var rating = document.getElementById("rating")
+var reviews = document.getElementById("reviews")
 var foodTypes = []
 var markers = [];
 var restaurants = [];
@@ -137,6 +139,8 @@ function searchRest(center) {
         // console.log(randomRestaurant.photos[0].getUrl())
         restaurantName.textContent = randomRestaurant.name
         address.textContent = randomRestaurant.formatted_address
+        rating.textContent = randomRestaurant.rating
+        reviews.textContent = randomRestaurant.user_ratings_total
         if (randomRestaurant.photos) {
             var pictureLink = randomRestaurant.photos[0].getUrl();
             picture1.src= pictureLink;
