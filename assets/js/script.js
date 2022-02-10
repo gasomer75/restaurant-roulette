@@ -181,4 +181,3 @@ function handleToggle(element) {
         foodTypes.splice(foodTypes.indexOf(element.name), 1)
     }
 }
-
