@@ -87,3 +87,7 @@ footer {
 .Names{
     font: bold 20px Georgia;
 }
+
+.info-container{
+    padding-top: 30px;
+}

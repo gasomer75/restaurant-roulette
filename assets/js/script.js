@@ -2,7 +2,9 @@ var buttonPress = document.getElementById('rouletteBtn')
 var picture1 = document.getElementById('picture1')
 var restaurantName = document.getElementById('restaurantName')
 var address = document.getElementById('address')
-var zipCode = document.getElementById("zipCode")
+var rating = document.querySelector('.rating')
+var totalRatings = document.getElementById('reviews')
+var opening = document.getElementById('open')
 var foodTypes = []
 var map;
 var service;
@@ -20,45 +22,29 @@ function initMap() {
 }
 
 buttonPress.addEventListener('click', function () {
-    // get latitude and longitude based on user zip code
-    //console.log("zip: " + zipCode.value);
-    axios.get("https://maps.googleapis.com/maps/api/geocode/json", {
-        params:{
-            address: zipCode.value,
-            key: 'AIzaSyAONmMU3cYfY67VabnCdB5GEKU9dVUhYJQ'
-        }
-    })
-    .then(function(response){
-        //console.log(response)
-        center = response.data.results[0].geometry.location;
-        //console.log(center);
-        searchRest(center);
-    });   
-    
-})
-
-function searchRest(center) {
     var request = {
         location: center,
-        radius: '10',
+        radius: '500',
         query: `${foodTypes.join(" ")} restaurant`
     };
-    //console.log(request)
+    // console.log(request.query)
     service.textSearch(request, function(results, status) {
       if (status === google.maps.places.PlacesServiceStatus.OK) {
-        //console.log(results);
-        // console.log(results[Math.floor(Math.random()*results.length)])
+         console.log(results[Math.floor(Math.random()*results.length)])
         var randomRestaurant = results[Math.floor(Math.random()*results.length)]
-         console.log(randomRestaurant.photos[0].getUrl())
+        // console.log(randomRestaurant.photos[0].getUrl())
         restaurantName.textContent = randomRestaurant.name
         address.textContent = randomRestaurant.formatted_address
+        rating.textContent = randomRestaurant.rating
+        totalRatings.textContent = randomRestaurant.user_ratings_total
         
+
         if (randomRestaurant.photos) {
             picture1.src=randomRestaurant.photos[0].getUrl()
         }
       }
     });
-}
+})
 
 //food toggle button
 function handleToggle(element) {
@@ -70,4 +56,3 @@ function handleToggle(element) {
         foodTypes.splice(foodTypes.indexOf(element.name), 1)
     }
 }
-
