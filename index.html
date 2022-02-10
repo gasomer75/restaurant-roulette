@@ -7,11 +7,11 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.4/dist/css/foundation.min.css" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
-    <title>Restuarant Roulette</title>
+    <title>Restaurant Roulette</title>
 </head>
 <body>
     <header>
-        <h1 class="text-center">Restuarant Roulette</h1>
+        <h1 class="text-center">Restaurant Roulette</h1>
     </header>
     
     <!--Switches-->  
@@ -35,11 +35,11 @@
           </div>
         </div>
         <div class="w3-col">
-          <p>Itailian</p>
+          <p>Italian</p>
           <div class="switch tiny">
-            <input class="switch-input" id="itailian-switch" type="checkbox" name="italian" onclick="handleToggle(this)">
-            <label class="switch-paddle" for="itailian-switch">
-              <span class="show-for-sr">Itailian Enabled</span>
+            <input class="switch-input" id="italian-switch" type="checkbox" name="italian" onclick="handleToggle(this)">
+            <label class="switch-paddle" for="italian-switch">
+              <span class="show-for-sr">Italian Enabled</span>
             </label>
           </div>
         </div>
@@ -75,12 +75,34 @@
       <!--User Input Feild-->
       <div class="user-container">
         <div class="price">
-          <label>Pricing:</label>
-          <input type="text" name="price" maxlength="50" placeholder="$" value=""/>
+          <label class="price-title">Price Level:</label>
+          <select name="price-range" class="price-dd" id="price-dd" onchange="chosenPrice()">
+            <option value="" disabled selected>Choose Price Level</option>
+            <option class="option" value="0">
+              <span>$</span>
+              <span>Low</span>
+            </option>
+            <option class="option" value="1">
+              <span>$$</span>
+              <span>Inexpensive</span>
+            </option>
+            <option class="option" value="2">
+              <span>$$$</span>
+              <span>Moderate</span>
+            </option>
+            <option class="option" value="3">
+              <span>$$$$</span>
+              <span>Expensive</span>
+            </option>
+            <option class="option" value="4">
+              <span>$$$$$</span>
+              <span>Very Expensive</span>
+            </option>
+          </select> 
         </div>
         <div>
           <label>Location:</label>
-          <input class = "zipCode" id = "zipCode" type="text" name="location" maxlength="50" placeholder="ZIP" />
+          <input class = "zipCode" id = "zipCode" type="text" name="location" maxlength="9" placeholder="Enter City Name or Zip Code" />
         </div>
 
         <button id = "load-btn">
@@ -95,7 +117,7 @@
 
       <div class="w3-main w3-content w3-padding" style="max-width: 1200px; margin-top: 50px;">
         <div class="w3-center">
-          <h3>Roulette'd Restuarant</h3>
+          <h3>Roulette'd Restaurant</h3>
           <div id = "container1"></div>
           <img id="picture1" src="./assets/images/image.png" alt="Sandwich" style="width:100%">
           <h4 id="restaurantName">Play roulette to reveal a restaurant</h4>

@@ -16,6 +16,18 @@ var marker;
 var backClicked = 0;
 
 
+function chosenPrice() {
+    var priceDefault = 2;
+    var priceInput = document.getElementById("price-dd").value;
+    var priceSel = parseInt(priceInput);
+
+        if (priceSel === 0 || priceSel === 1 || priceSel === 3 || priceSel === 4) {
+            return priceSel;
+        } else {
+            return priceDefault;
+            } 
+};
+
 function initMap() {
     var options = {
         zoom:13,
@@ -124,12 +136,14 @@ buttonPress.addEventListener('click', function () {
 })
 
 function searchRest(center) {
-    console.log("made it")
-    console.log(center);
+    var priceLevel = chosenPrice();
+    //console.log("made it")
     var request = {
         location: center,
-        radius: '5',
-        query: `${foodTypes.join(" ")} restaurant`
+        radius: '500',
+        query: `${foodTypes.join(" ")} restaurant`,
+        price_level: priceLevel
+
     };
     //console.log(request);
     var coords;
