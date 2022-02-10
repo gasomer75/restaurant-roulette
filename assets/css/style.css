@@ -2,7 +2,7 @@ html{
     size: 50%;
 }
 header{
-    opacity: 70%;
+    /* opacity: 70%; */
     padding: 40px;
     font-weight: bold;
 }
@@ -58,7 +58,7 @@ footer {
     margin-top: 2%;
  }
 
- body{
+body{
     -webkit-transform:scale(0.75);
     -moz-transform:scale(0.75);
     -ms-transform:scale(0.75);
@@ -70,11 +70,11 @@ footer {
     display:grid;
     margin-left:25%;
     background-image: url("https://jawphotography.co.uk/wp-content/uploads/2014/10/1.jpg");
- }
+}
 
- body *{
+body *{
     margin:auto;
- }
+}
 
 .w3-col{
     font: bold 15px/30px Georgia, serif;
