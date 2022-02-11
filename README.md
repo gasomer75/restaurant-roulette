@@ -1,4 +1,4 @@
-# Restarant Roulette
+# Restaurant Roulette
 
 #### Make deciding where to eat fun!
 
