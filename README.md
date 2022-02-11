@@ -25,7 +25,7 @@ A web application that is designed to eliminate frustration in deciding where to
 ##### *Before*
 ![Restaurant Roulette](/assets/images/screenshot.png "Screenshot of the restaurant roulette application")
 
-##### *Before*
+##### *After*
 ![Restaurant Roulette](/assets/images/screenshot2.png "Screenshot of the restaurant roulette application")
 
 #### Created By:
