@@ -1,4 +1,4 @@
-# Restarant Roulette
+# Restaurant Roulette
 
 #### Make deciding where to eat fun!
 
@@ -20,8 +20,13 @@ A web application that is designed to eliminate frustration in deciding where to
         * Google Places
         * Google Maps
 
-### Page Screenshot
+### Page Screenshots
+
+##### *Before*
 ![Restaurant Roulette](/assets/images/screenshot.png "Screenshot of the restaurant roulette application")
+
+##### *Before*
+![Restaurant Roulette](/assets/images/screenshot2.png "Screenshot of the restaurant roulette application")
 
 #### Created By:
 
