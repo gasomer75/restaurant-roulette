@@ -143,7 +143,6 @@ function searchRest(center) {
         radius: '500',
         query: `${foodTypes.join(" ")} restaurant`,
         price_level: priceLevel
-
     };
     //console.log(request);
     var coords;
