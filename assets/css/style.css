@@ -1,0 +1,127 @@
+html{
+    size: 50%;
+}
+header{
+    /* opacity: 70%; */
+    padding: 40px;
+    font-weight: bold;
+}
+
+h1{
+    font-weight: 900;
+    color: black;
+    font-size: 70px;
+}
+
+.switch-container {
+    column-count: 6;
+    color: black;
+}
+
+.button {
+    background-color: rgb(148, 57, 57);
+    border: 2px solid black;
+    padding: 10px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position:absolute; right:75px; top:235px;
+    font-size: 15px;
+    border-radius: 25%;
+    margin-top: 3%;
+}
+
+.price{
+    display: inline-block;
+}
+
+.user-container{
+    column-count: 3;
+    font: bold 15px/30px Georgia, serif;
+}
+
+footer {
+    border-bottom: 40px solid rgb(148, 57, 57);
+}
+
+ h5{
+     color: white;
+ }
+
+.rb-container{
+    display:grid;
+ }
+
+.roulette-button{
+    width: 250px;
+    position:absolute; left:425px; top:65px;
+    font: bold 15px/30px Georgia, serif;
+    margin-top: 2%;
+ }
+
+body{
+    -webkit-transform:scale(0.75);
+    -moz-transform:scale(0.75);
+    -ms-transform:scale(0.75);
+    transform:scale(0.75);
+    -ms-transform-origin:0 0;
+    -webkit-transform-origin:0 0;
+    -moz-transform-origin:0 0;
+    transform-origin:0 0;
+    display:grid;
+    margin-left:25%;
+    background-image: url("https://jawphotography.co.uk/wp-content/uploads/2014/10/1.jpg");
+}
+
+body *{
+    margin:auto;
+}
+
+.w3-col{
+    font: bold 15px/30px Georgia, serif;
+}
+
+.user-container{
+    font: bold 15px/30px Georgia, serif;
+}
+
+.TY{
+    font: bold 40px Georgia;
+}
+
+.Names{
+    font: bold 20px Georgia;
+}
+
+#map {
+    width: 600px;
+    height: 450px;
+    text-align: center;
+    margin-top: 2%;
+    margin-bottom: 3%;
+}
+
+.switch-paddle, .switch-input, .switch{
+    border-radius: 25%;
+}
+
+.w3-center{
+    margin-bottom: 4%;
+    font-weight: 300;
+    margin-top: 3%
+}
+
+.w3-third{
+    margin-bottom: 4%;
+}
+© 2022 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Docs
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
