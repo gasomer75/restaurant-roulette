@@ -1,127 +1,390 @@
-html{
-    size: 50%;
-}
-header{
-    /* opacity: 70%; */
-    padding: 40px;
-    font-weight: bold;
+:root {
+    --first-color: rgb(148, 57, 57);
+    --second-color: black;
+    --feature-color: gold;
 }
 
-h1{
-    font-weight: 900;
-    color: black;
-    font-size: 70px;
+body {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-variant: small-caps;
+    background-image: url("https://jawphotography.co.uk/wp-content/uploads/2014/10/1.jpg");
+    background-size: cover;
+}
+
+/* Header and Title */
+.page-title {
+    font-weight: 500;
+    font-style: italic;
+    font-size: 65px;
+    text-shadow: -2px -1px 3px var(--first-color);
+}
+
+.title-r {
+    font-weight: 700;
+    font-style: italic;
+    font-size: 80px;
+    color: var(--first-color);
+    text-shadow: -2px -1px 3px var(--second-color);
+}
+
+/* User Input Section */
+.user-input {
+    margin: 5px 10px;
+    padding: 10px 5px;
+    border: 5px solid var(--first-color);
 }
 
 .switch-container {
-    column-count: 6;
-    color: black;
+    padding: 25px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    color: var(--second-color);
 }
 
-.button {
-    background-color: rgb(148, 57, 57);
-    border: 2px solid black;
-    padding: 10px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position:absolute; right:75px; top:235px;
+.food-type {
     font-size: 15px;
+    font-weight: bold;
+}
+
+.user-container{
+    padding: 25px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.select-cont {
+    width: 75%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+
+.label{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.back-cont {
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.back-btn {
+    width: 60%;
+    height: 80%;
+    background-color: var(--second-color);
+    color: var(--first-color);
+    font-size: 25px;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-radius: 25%;
-    margin-top: 3%;
+    box-shadow: -3px 3px 6px var(--second-color);
 }
 
-.price{
-    display: inline-block;
+.pb-cont {
+    width: 100%;
+    padding: 30px 0;
 }
 
-.user-container{
-    column-count: 3;
-    font: bold 15px/30px Georgia, serif;
+.play-btn {
+    width: 60%;
+    padding: 15px 10px;
+    background-color: var(--first-color);
+    color: var(--feature-color);
+    font-size: 35px;
+    font-weight: 500;
+    border-radius: 25%;
+    box-shadow: -3px 3px 6px var(--second-color);
 }
 
-footer {
-    border-bottom: 40px solid rgb(148, 57, 57);
+.back-btn:hover, 
+.play-btn:hover {
+    box-shadow: none;
 }
 
- h5{
-     color: white;
- }
-
-.rb-container{
-    display:grid;
- }
-
-.roulette-button{
-    width: 250px;
-    position:absolute; left:425px; top:65px;
-    font: bold 15px/30px Georgia, serif;
-    margin-top: 2%;
- }
-
-body{
-    -webkit-transform:scale(0.75);
-    -moz-transform:scale(0.75);
-    -ms-transform:scale(0.75);
-    transform:scale(0.75);
-    -ms-transform-origin:0 0;
-    -webkit-transform-origin:0 0;
-    -moz-transform-origin:0 0;
-    transform-origin:0 0;
-    display:grid;
-    margin-left:25%;
-    background-image: url("https://jawphotography.co.uk/wp-content/uploads/2014/10/1.jpg");
+/* Generated Restaurant Information */
+.rest-info h2,
+.rest-info h3 {
+    margin: 0;
+    font-size: 35px;
+    font-weight: 400;
+    background-color: var(--first-color);
+    color: var(--second-color);
+    border: 2px solid var(--second-color);
+    font-style: italic;
 }
 
-body *{
-    margin:auto;
+.rest-pic {
+    padding: 10px 15px;
 }
 
-.w3-col{
-    font: bold 15px/30px Georgia, serif;
+.address {
+    color: var(--first-color);
+    font-size: 20px;
+    font-weight: bold;
+    font-style: italic;
 }
 
-.user-container{
-    font: bold 15px/30px Georgia, serif;
+.map-data {
+    display: flex;
+    justify-content: center;
+}
+.rest-data {
+    margin: 15px;
+    width: 600px;
+    height: 450px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border: 2px solid var(--first-color);
 }
 
-.TY{
-    font: bold 40px Georgia;
+.data {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
 }
 
-.Names{
-    font: bold 20px Georgia;
+.data h4 {
+    width: 100%;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.data h5 {
+    font-size: 55px;
+    font-weight: bold;
+}
+
+.map-holder {
+    display: flex;
+    justify-content: center;
 }
 
 #map {
+    margin: 15px;
     width: 600px;
     height: 450px;
     text-align: center;
-    margin-top: 2%;
-    margin-bottom: 3%;
 }
 
-.switch-paddle, .switch-input, .switch{
-    border-radius: 25%;
+/* Footer and Credits */
+.footer {
+    margin-top: 40px;
+    padding: 0;
+    border-bottom: 20px solid rgb(148, 57, 57);
 }
 
-.w3-center{
-    margin-bottom: 4%;
-    font-weight: 300;
-    margin-top: 3%
+.ty {
+    margin: 0;
+    background-color: var(--first-color);
+    font-weight: 400;
+    font-size: 28px;
+    font-style: italic;
 }
 
-.w3-third{
-    margin-bottom: 4%;
+.names {
+    font-size: 20px;
+    color: var(--first-color);
+    text-shadow: -2px -1px 2px var(--second-color);
 }
-© 2022 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Docs
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
+
+
+/* Media Query Section */
+@media screen and (max-width: 900px) {
+    /* Header and Title */
+    .page-title {
+        font-size: 50px;
+    }
+
+    .title-r {
+        font-size: 65px;
+    }
+
+    /* User Input Section */
+    .switch-container {
+        padding: 22px 0;
+    }
+
+    .box {
+        width: 16px;
+        height: 16px;
+    }
+
+    .food-type {
+        font-size: 13px;
+        display: flex;
+        align-items: flex-end;
+    }
+
+    .label{
+        width: 100%;
+        font-size: 15px;
+        text-align: left;
+    }
+
+    .price {
+        width: 45%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-end;
+    }
+
+    .location {
+        width: 50%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-end;
+    }
+
+    .price-dd {
+        font-size: 15px;
+    }
+
+    .option {
+        font-size: 13px;
+    }
+
+    .back-btn {
+        font-size: 18px;
+    }
+
+    .play-btn {
+        width: 50%;
+        font-size: 24px;
+    }
+
+   .map-data {
+       width: 100%;
+       flex-wrap: wrap;
+   }
+
+   .rest-data {
+       flex-wrap: nowrap;
+       height: auto;
+   }
+    
+}
+
+@media screen and (max-width: 625px) {
+     /* Header and Title */
+     .page-title {
+        font-size: 40px;
+    }
+
+    .title-r {
+        font-size: 55px;
+    }
+
+    /* User Input Section */
+    .switch-box {
+        width: 33%;
+    }
+
+    .box {
+        width: 14px;
+        height: 14px;
+    }
+
+    .food-type {
+        margin-bottom: 10px;
+        width: 100%;
+        font-size: 11px;
+        justify-content: center;
+    }
+
+    .select-cont {
+        padding-left: 10px;
+        align-items: stretch;
+        justify-content: left;
+    }
+
+    .label{
+        font-size: 12px;
+    }
+
+    .price {
+        width: 60%;
+        margin-bottom: 15px;
+    }
+
+    .price-dd {
+        font-size: 12px;
+    }
+
+    .location {
+        width: 60%;
+        font-size: 12px;
+    }
+
+    .back-btn {
+        width: 100%;
+        margin-right: 10px;
+        padding: 5px;
+        font-size: 16px;
+    }
+
+    .play-btn {
+        width: 90%;
+        font-size: 16px;
+    }
+
+    /* Generated Restaurant Info */
+    .rest-info h2,
+    .rest-info h3 {
+        font-size: 22px;
+    }
+
+    .rest-pic {
+        padding: 10px 5px;
+    }
+
+   .map-data {
+       width: 100%;
+   }
+
+    .rest-data {
+        margin: 5px;
+    }
+
+   .data h4 {
+    width: 100%;
+    font-size: 25px;
+    font-weight: bold;
+    }
+
+    .data h5 {
+        font-size: 35px;
+        font-weight: bold;
+    }
+
+   #map {
+    margin: 15px;
+    width: 300px;
+    height: 300px;
+    text-align: center;
+    }
+
+   .rest-data {
+       flex-wrap: nowrap;
+       height: auto;
+   }
+    
+   /* Footer and Credits */
+    .ty {       
+        font-size: 20px;
+    }
+
+    .names {
+        font-size: 14px;
+    }
+}
