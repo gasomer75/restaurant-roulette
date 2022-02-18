@@ -5,79 +5,62 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.4/dist/css/foundation.min.css" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/style2.css">
     <title>Restaurant Roulette</title>
 </head>
 <body>
-    <header>
-        <h1 class="text-center">Restaurant Roulette</h1>
-    </header>
-    
-    <!--Switches-->  
-    <div class="switch-container">
-        <div class="w3-col">
-        <p>American</p>          
-          <div class="switch tiny">
-            <input class="switch-input" id="american-switch" type="checkbox" name="american" onclick="handleToggle(this)">
-            <label class="switch-paddle" for="american-switch">
-              <span class="show-for-sr">American Enabled</span>
-            </label>
-          </div>
-       </div>
-        <div class="w3-col">
-          <p>Chinese</p>
-          <div class="switch tiny">
-            <input class="switch-input" id="chinese-switch" type="checkbox" name="chinese" onclick="handleToggle(this)">
-            <label class="switch-paddle" for="chinese-switch">
-              <span class="show-for-sr">Chinese Enabled</span>
-            </label>
-          </div>
-        </div>
-        <div class="w3-col">
-          <p>Italian</p>
-          <div class="switch tiny">
-            <input class="switch-input" id="italian-switch" type="checkbox" name="italian" onclick="handleToggle(this)">
-            <label class="switch-paddle" for="italian-switch">
-              <span class="show-for-sr">Italian Enabled</span>
-            </label>
-          </div>
-        </div>
-        <div class="w3-col">
-          <p>Indian</p>
-          <div class="switch tiny">
-            <input class="switch-input" id="indian-switch" type="checkbox" name="indian" onclick="handleToggle(this)">
-            <label class="switch-paddle" for="indian-switch">
-              <span class="show-for-sr">Indian Enabled</span>
-            </label>
-          </div>
-        </div>
-        <div class="w3-col">
-          <p>Japanese</p>
-          <div class="switch tiny">
-            <input class="switch-input" id="japanese-switch" type="checkbox" name="japanese" onclick="handleToggle(this)">
-            <label class="switch-paddle" for="japanese-switch">
-              <span class="show-for-sr">Japanese Enabled</span>
-            </label>
-          </div>
-        </div>
-        <div class="w3-col">
-          <p>Mexican</p>
-          <div class="switch tiny">
-            <input class="switch-input" id="mexican-switch" type="checkbox" name="mexican" onclick="handleToggle(this)">
-            <label class="switch-paddle" for="mexican-switch">
-              <span class="show-for-sr">Mexican Enabled</span>
-            </label>
-          </div>
-        </div>
-      </div>
 
-      <!--User Input Feild-->
-      <div class="user-container">
+  <header>
+    <h1 class="page-title w3-center w3-wide">
+      <span class="title-r">R</span>estaurant
+      <span class="title-r">R</span>oulette
+    </h1>
+  </header>
+
+  <div class="user-input w3-center">
+    <!--Switches--> 
+    <div class="switch-container">
+
+        <div class="switch-box">
+          <input class="box w3-check" id="american-switch" type="checkbox" name="american" onclick="handleToggle(this)">
+          <label class="food-type" for="american-switch">American</label>
+        </div>
+
+        <div class="switch-box">
+          <input class="box w3-check" id="chinese-switch" type="checkbox" name="chinese" onclick="handleToggle(this)">
+          <label class="food-type" for="chinese-switch">Chinese</label>
+        </div>
+      
+        <div class="switch-box">
+          <input class="box w3-check" id="italian-switch" type="checkbox" name="italian" onclick="handleToggle(this)">
+          <label class="food-type" for="italian-switch">Italian</label>
+        </div>       
+
+        <div class="switch-box">
+          <input class="box w3-check" id="indian-switch" type="checkbox" name="indian" onclick="handleToggle(this)">
+          <label class="food-type" for="indian-switch">Indian</label>
+        </div>
+      
+        <div class="switch-box">
+          <input class="box w3-check" id="japanese-switch" type="checkbox" name="japanese" onclick="handleToggle(this)">
+          <label class="food-type" for="japanese-switch">Japanese</label>
+        </div>
+
+        <div class="switch-box">
+          <input class="box w3-check" id="mexican-switch" type="checkbox" name="mexican" onclick="handleToggle(this)">
+          <label class="food-type" for="mexican-switch">Mexican</label>
+        </div>
+
+    </div>
+
+    <!--User Input Feild-->
+    <div class="user-container">
+
+      <div class="select-cont">
         <div class="price">
-          <label class="price-title">Price Level:</label>
+          <label class="label">Price Level:</label>
           <select name="price-range" class="price-dd" id="price-dd" onchange="chosenPrice()">
-            <option value="" disabled selected>Choose Price Level</option>
+            <option class="option" value="" disabled selected>Choose Price Level</option>
             <option class="option" value="0">
               <span>$</span>
               <span>Low</span>
@@ -100,61 +83,77 @@
             </option>
           </select> 
         </div>
-        <div>
-          <label>Location:</label>
-          <input class = "zipCode" id = "zipCode" type="text" name="location" maxlength="9" placeholder="Enter City Name or Zip Code" />
-        </div>
 
-        <button id = "load-btn">
-          <a class="button">Click to go back</a>
+        <div class="location">
+          <label class="label">Location:</label>
+          <input class = "zipCode" id = "zipCode" type="text" name="location" maxlength="50" placeholder="City Name or Zip Code" />
+        </div>
+      </div>
+      
+      <div class="back-cont">
+        <button class="back-btn w3-btn" id="load-btn">
+          Back
         </button>
       </div>
+    </div>
 
-      <!--Roulette Button-->
-      <div class="roulette-button">
-        <a class="button expanded" href="#" id = "rouletteBtn">Roulette</a>
+    <!--Roulette Button-->
+    <div class="pb-cont">
+      <button class="play-btn w3-btn" id="rouletteBtn">
+        Play Restaurant Roulette
+      </button>
+    </div>
+
+  </div>
+
+  <!-- Generated Restaurant Section-->
+  <div class="rest-pic w3-main w3-content" style="max-width: 1200px; margin-top: 50px;">
+
+    <div class="rest-info w3-center">
+      <h2>Roulette'd Restaurant</h2>
+      <!-- Generated Image Placeholder -->
+      <div id = "container1"></div>
+      <img id="picture1" src="./assets/images/image.png" alt="Sandwich" style="width:100%">
+      
+      <h3 id="restaurantName">play roulette to reveal a restaurant</h3>
+      <p class="address" id="address"></p>
+    </div>
+
+  </div>
+
+  <div class="map-data">
+    <div class="rest-data w3-container w3-center">
+
+      <div class="data w3-container">
+        <h4>Customer Rating</h4>
+        <h5 id="rating">0.0</h5>
       </div>
 
-      <div class="w3-main w3-content w3-padding" style="max-width: 1200px; margin-top: 50px;">
-        <div class="w3-center">
-          <h3>Roulette'd Restaurant</h3>
-          <div id = "container1"></div>
-          <img id="picture1" src="./assets/images/image.png" alt="Sandwich" style="width:100%">
-          <h4 id="restaurantName">Play roulette to reveal a restaurant</h4>
-          <p id="address"></p>
-        </div>
-        
-    </div>
-      
-    <div>
-        <div class="w3-quarter">
-          <h4>Rating</h4>
-          <h1 id="rating">0.0</h1>
-        </div>
-        <div class="w3-quarter">
-          <h4>Total Reviews</h4>
-          <h1 id="reviews">0</h1>
-        </div>
-        <div class="w3-quarter">
-          <img src="./assets/images/bw-wheel.jpeg" alt="review profile">
+      <div class="data w3-container">
+        <h4>Total Reviews</h4>
+        <h5 id="reviews">0</h5>
+      </div>
+
     </div>
 
-    <div class="w3-third" id = "map"></div>
+    <div class="map-holder">
+      <div class="" id = "map"></div>
+    </div>
+  </div>
 
-    <footer class="w3-container w3-padding-64 w3-light-grey w3-center w3-large"> 
-      <p class="TY">Authored and Illustrated by:</p>
-      <p>--------------------------------------------------------------------------------------------------------------------------------------</p>
-      <p class="Names">Tyler Beck, Devin Reina, Rachel Saito, Geoff Somer, Jessica Versoza</p>
-    </footer>
+  <footer class="footer w3-container w3-center w3-large"> 
+    <h6 class="ty">Authored and Illustrated by:</h6>
+    <p class="names w3-wide">Tyler Beck, Devin Reina, Rachel Saito, Geoff Somer, Jessica Versoza</p>
+  </footer>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src ="assets/js/script.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src ="assets/js/script.js"></script>
 
-    <!--google map/places api-->
-    <script async
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDf3uVZunI6AquJI3klFXdQqN7he62S3hU&libraries=places&callback=initMap">
-  </script>
+  <!--google map/places api-->
+  <script async
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDf3uVZunI6AquJI3klFXdQqN7he62S3hU&libraries=places&callback=initMap">
+</script>
 
 </body>
- </html>
+</html>

@@ -12,13 +12,15 @@ A web application that is designed to eliminate frustration in deciding where to
 ## Built with
 
 * HTML
+
 * CSS
-    * Foundation CSS framework
     * W3 Schools CSS framework
+
 * Javascript
     * API requests to:
         * Google Places
         * Google Maps
+        * Google Geolocation
 
 ### Page Screenshot
 ![Restaurant Roulette](/assets/images/screenshot.png "Screenshot of the restaurant roulette application")
