@@ -22,8 +22,13 @@ A web application that is designed to eliminate frustration in deciding where to
         * Google Maps
         * Google Geolocation
 
-### Page Screenshot
+### Page Screenshots
+
+##### *Before*
 ![Restaurant Roulette](/assets/images/screenshot.png "Screenshot of the restaurant roulette application")
+
+##### *After*
+![Restaurant Roulette](/assets/images/screenshot2.png "Screenshot of the restaurant roulette application")
 
 #### Created By:
 
