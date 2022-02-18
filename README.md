@@ -25,10 +25,10 @@ A web application that is designed to eliminate frustration in deciding where to
 ### Page Screenshots
 
 ##### *Before*
-![Restaurant Roulette](/assets/images/screenshot.png "Screenshot of the restaurant roulette application")
+![Restaurant Roulette](/assets/images/screen-shot.png "Screenshot of the restaurant roulette application")
 
 ##### *After*
-![Restaurant Roulette](/assets/images/screenshot2.png "Screenshot of the restaurant roulette application")
+![Restaurant Roulette](/assets/images/screen-shot-2.png "Screenshot of the restaurant roulette application")
 
 #### Created By:
 
